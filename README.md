@@ -51,7 +51,7 @@ A biblioteca [WiringPi](http://wiringpi.com/) proporciona a interface dos GPIO d
 
   $ ./ttn-abp-send
 
-## Mapeamento de hardware:
+## Mapeamento de hardware
 
 O mapeamento completo de pinos da WiringPi pode ser visto [aqui](https://github.com/lucasmaziero/lmic-rpi-fox/blob/master/Raspberry%20Pi%20GPIO%20Pins.png)
 
