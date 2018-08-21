@@ -4,7 +4,7 @@ Essa biblioteca proporciona interface entre hardware e software, composta por um
 operando na frequência de 915 MHz e três LEDs indicadores, sendo um de cor verde que indica power on e dois vermelhos de uso geral podendo ser configurados
 para indicar algum tipo de status do sistema.
 
-Obs.: A construção dessa biblioteca deve como base a [lmic_pi](https://github.com/dragino/lmic_pi) com algumas adaptação para ser
+Obs.: A construção dessa biblioteca teve como base a [lmic_pi](https://github.com/dragino/lmic_pi) com algumas adaptação para ser
 compatível com a rede LoRaWAN da [Universidade Federal de Santa Maria](https://www.ufsm.br/).
 
 ## Pimeiros passos antes de fazer o download da biblioteca
