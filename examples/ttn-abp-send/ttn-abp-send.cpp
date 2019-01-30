@@ -15,9 +15,9 @@
 /**************************************************************************
 CONFIGURATION NODE LORA
 **************************************************************************/
-#define DATA_RATE_UP_DOWN DR_SF10 // Spreading factor (DR_SF7 - DR_SF12)
-#define TX_POWER          14      // power option: 2, 5, 8, 11, 14 and 20
-#define SESSION_PORT      0x01    // Port session
+#define DATA_RATE_UP_DOWN 2     // Spreading factor (DR0 - DR5)
+#define TX_POWER          14    // power option: 2, 5, 8, 11, 14 and 20
+#define SESSION_PORT      1     // Port session
 
 /**************************************************************************
   AUXILIARY LIBRARIES
@@ -42,13 +42,13 @@ CONFIGURATION NODE LORA
 #define STATUS_PIN_LED 2
 
 // LoRaWAN end-device address (DevAddr)
-static const u1_t DevAddr[4] ={0x26, 0x01, 0x17, 0x2E};
+static const u1_t DevAddr[4] ={0xFF, 0xFF, 0xFF, 0xFF};
 
 // LoRaWAN NwkSKey, network session key
-static const u1_t Nwkskey[16] ={0x81, 0x58, 0xC3, 0x00, 0xAB, 0x35, 0x5E, 0xD7, 0xF4, 0x1D, 0xC9, 0x0F, 0xDD, 0x4C, 0xB1, 0xB9};
+static const u1_t Nwkskey[16] ={0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
 // LoRaWAN AppSKey, application session key
-static const u1_t Appskey[16] ={0xB7, 0xA2, 0x76, 0xBE, 0xAB, 0x79, 0xDF, 0x9C, 0xA0, 0x7B, 0xB6, 0xB4, 0x4A, 0xF5, 0x67, 0xE8};
+static const u1_t Appskey[16] ={0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
 // Schedule TX every this many seconds (might become longer due to duty cycle limitations).
 int TX_INTERVAL = 30;
@@ -205,7 +205,7 @@ void setup()
   LMIC_stopPingable();
   
   // TTN RX2 window.
-  LMIC.dn2Dr = DATA_RATE_UP_DOWN;
+  LMIC.dn2Dr = 8; // DR8
   
   // Set data rate and transmit power (note: txpow seems to be ignored by the library)
   LMIC_setDrTxpow(DATA_RATE_UP_DOWN, TX_POWER);
