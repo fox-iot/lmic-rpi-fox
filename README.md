@@ -69,6 +69,8 @@ WiringPi 13 == MISO
   
 WiringPi 14 == SCK
 
+WiringPi 6 == SS
+
 WiringPi 2 == LED1
 
 WiringPi 3 == LED2
