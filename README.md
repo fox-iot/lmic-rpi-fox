@@ -1,8 +1,7 @@
 # Biblioteca para [Shield LoRaWAN Raspberry Pi](https://github.com/lucasmaziero/lmic-rpi-fox/blob/master/Shield_Lora_Foxiot.pdf)  (desenvolvido por [Fox IoT](http://foxiot.com.br/))
 
 Essa biblioteca proporciona interface entre hardware e software, composta por um chip LoRa [RFM95](http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf)
-operando na frequência de 915 MHz e três LEDs indicadores, sendo um de cor verde que indica power on e dois vermelhos de uso geral podendo ser configurados
-para indicar algum tipo de status do sistema.
+operando na frequência de 915 MHz e três LEDs indicadores, sendo um de cor verde que indica power on e dois vermelhos de uso geral podendo ser configurados para indicar algum tipo de status do sistema.
 
 Obs.: A construção dessa biblioteca teve como base a [lmic_pi](https://github.com/dragino/lmic_pi) com algumas adaptação para ser
 compatível com a rede LoRaWAN da [Universidade Federal de Santa Maria](https://www.ufsm.br/).
